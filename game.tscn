@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=3 uid="uid://cebn7vqdnsubq"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_lh1yk"]
+[ext_resource type="Texture2D" uid="uid://c8jvhqyb1ks5s" path="res://butonExample.png" id="2_b8cfr"]
+[ext_resource type="Texture2D" uid="uid://c8cnvpqttt6q7" path="res://bg.jpg" id="2_uy8c6"]
+
+[node name="game" type="Node2D"]
+script = ExtResource("1_lh1yk")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 500.0
+offset_bottom = 399.0
+texture = ExtResource("2_uy8c6")
+
+[node name="Ready" type="Button" parent="."]
+offset_left = 368.0
+offset_top = 334.0
+offset_right = 478.0
+offset_bottom = 381.0
+theme_override_colors/font_color = Color(0.172549, 0.823529, 0, 1)
+theme_override_font_sizes/font_size = 27
+text = "Finish"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 217.0
+offset_top = 16.0
+offset_right = 279.0
+offset_bottom = 47.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "LEVEL"
+horizontal_alignment = 1
+
+[node name="score" type="Label" parent="."]
+offset_left = 182.0
+offset_top = 210.0
+offset_right = 276.0
+offset_bottom = 241.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.909804, 1, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "SCORE: 0"
+horizontal_alignment = 1
+
+[node name="Press" type="Button" parent="."]
+offset_left = 170.0
+offset_top = 83.0
+offset_right = 329.0
+offset_bottom = 177.0
+text = "PRESS"
+icon = ExtResource("2_b8cfr")
+
+[connection signal="pressed" from="Ready" to="." method="_on_ready_pressed"]
+[connection signal="pressed" from="Press" to="." method="_on_press_pressed"]

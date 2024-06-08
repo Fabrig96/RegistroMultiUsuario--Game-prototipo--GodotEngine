@@ -1,0 +1,108 @@
+[gd_scene load_steps=3 format=3 uid="uid://bm3emdgg2gtt4"]
+
+[ext_resource type="Script" path="res://result.gd" id="1_u7mr7"]
+[ext_resource type="Texture2D" uid="uid://c8cnvpqttt6q7" path="res://bg.jpg" id="2_cwsu2"]
+
+[node name="Result" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u7mr7")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 500.0
+offset_bottom = 401.0
+texture = ExtResource("2_cwsu2")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 86.0
+offset_right = 461.0
+offset_bottom = 278.0
+color = Color(0.105882, 0.105882, 0.105882, 0.670588)
+
+[node name="Resultados" type="Label" parent="."]
+layout_mode = 2
+offset_left = 179.0
+offset_top = 26.0
+offset_right = 328.0
+offset_bottom = 65.0
+theme_override_colors/font_color = Color(0, 0.882353, 0.192157, 1)
+theme_override_font_sizes/font_size = 28
+text = "Resultados"
+
+[node name="ScoreHistorico" type="Label" parent="."]
+layout_mode = 2
+offset_left = 122.0
+offset_top = 192.0
+offset_right = 310.0
+offset_bottom = 226.0
+theme_override_colors/font_color = Color(0, 0.882353, 0.792157, 1)
+theme_override_font_sizes/font_size = 24
+text = "Score Historico: "
+
+[node name="Rango" type="Label" parent="."]
+visible = false
+layout_mode = 2
+offset_left = 76.5
+offset_top = 341.0
+offset_right = 155.5
+offset_bottom = 375.0
+theme_override_colors/font_color = Color(0, 0.882353, 0.792157, 1)
+theme_override_font_sizes/font_size = 24
+text = "Rango:"
+
+[node name="Usuario" type="Label" parent="."]
+layout_mode = 1
+offset_left = 125.0
+offset_top = 118.0
+offset_right = 229.0
+offset_bottom = 152.0
+theme_override_colors/font_color = Color(0.427451, 0.882353, 0.87451, 1)
+theme_override_font_sizes/font_size = 24
+text = "Usuario: "
+
+[node name="Score" type="Label" parent="."]
+layout_mode = 2
+offset_left = 123.0
+offset_top = 155.0
+offset_right = 317.0
+offset_bottom = 189.0
+theme_override_colors/font_color = Color(0, 0.882353, 0.792157, 1)
+theme_override_font_sizes/font_size = 24
+text = "Score obtenido:  "
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 168.0
+offset_top = 11.0
+offset_right = 815.0
+offset_bottom = 51.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="mostrarUsuarios" type="Button" parent="."]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 331.0
+offset_right = 346.0
+offset_bottom = 367.0
+theme_override_font_sizes/font_size = 20
+text = "Ver otros usuarios"
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="pressed" from="mostrarUsuarios" to="." method="_on_mostrar_usuarios_pressed"]

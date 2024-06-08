@@ -1,0 +1,93 @@
+[gd_scene load_steps=3 format=3 uid="uid://bc80fw2fdgls"]
+
+[ext_resource type="Script" path="res://ingreso.gd" id="1_ogbgx"]
+[ext_resource type="Texture2D" uid="uid://c8cnvpqttt6q7" path="res://bg.jpg" id="2_yxy8f"]
+
+[node name="Ingreso" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ogbgx")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.0588235, 0, 0.784314, 1)
+layout_mode = 0
+offset_right = 500.0
+offset_bottom = 401.0
+texture = ExtResource("2_yxy8f")
+
+[node name="labelNombre" type="Label" parent="."]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 110.0
+offset_right = 207.0
+offset_bottom = 141.0
+theme_override_colors/font_color = Color(0, 0.992157, 0.890196, 1)
+theme_override_font_sizes/font_size = 22
+text = "Nombre:"
+
+[node name="Welcome" type="Label" parent="."]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 33.0
+offset_right = 297.0
+offset_bottom = 64.0
+theme_override_colors/font_color = Color(0, 0.992157, 0.890196, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.172549, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 22
+text = "WELCOME"
+
+[node name="LabelRango" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 141.0
+offset_top = 159.0
+offset_right = 205.0
+offset_bottom = 182.0
+text = "Rango"
+
+[node name="Nombre" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 222.0
+offset_top = 113.0
+offset_right = 376.0
+offset_bottom = 144.0
+placeholder_text = "complete aquí"
+
+[node name="Rango" type="LineEdit" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 217.0
+offset_top = 157.0
+offset_right = 328.0
+offset_bottom = 188.0
+
+[node name="ingresar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 187.0
+offset_top = 225.0
+offset_right = 321.0
+offset_bottom = 276.0
+theme_override_colors/font_color = Color(0, 0.815686, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "Ingresar"
+
+[node name="errorNombre" type="Label" parent="."]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 159.0
+offset_right = 356.0
+offset_bottom = 182.0
+theme_override_colors/font_color = Color(0.933333, 0.160784, 0, 1)
+text = "Complete el campo nombre"
+
+[connection signal="pressed" from="ingresar" to="." method="_on_ingresar_pressed"]

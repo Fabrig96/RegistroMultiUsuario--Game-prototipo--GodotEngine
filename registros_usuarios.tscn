@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://n5dhaghwbcqx"]
+
+[ext_resource type="Script" path="res://registros_usuarios.gd" id="1_y63vg"]
+
+[node name="RegistrosUsuarios" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y63vg")
+
+[node name="Tree" type="Tree" parent="."]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 30.0
+offset_right = 429.0
+offset_bottom = 372.0
+theme_override_colors/title_button_color = Color(0, 0.768627, 0, 1)
+theme_override_colors/font_color = Color(0.796078, 1, 0.690196, 1)
+theme_override_font_sizes/title_button_font_size = 24
